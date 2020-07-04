@@ -44,7 +44,6 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo dd if=/dev/zero of=/swap bs=1G count=50
         sudo mkswap /swap 
         sudo swapoff /swapfile
         sudo rm -rf /swapfile /etc/apt/sources.list.d/*
